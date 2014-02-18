@@ -8,6 +8,8 @@
                  [com.draines/postal "1.11.0"]
                  [hiccup "1.0.4"]
                  [clj-time "0.6.0"]
+                 [cheshire "5.3.1"]
 		             [lein-light-nrepl "0.0.15"]] ;;Make sure to check what the latest version of lein-light-nrepl is
-  :repl-options {:nrepl-middleware [lighttable.nrepl.handler/lighttable-ops]})
+  :repl-options {:nrepl-middleware [lighttable.nrepl.handler/lighttable-ops]}
+  :main apache-logmine.core )
 

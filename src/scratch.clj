@@ -9,9 +9,11 @@
 
 
 (def sstr "92.168.34.11 - - [16/Feb/2014:06:25:19 +0000] \"GET /Pr\"")
+(format )
 
-(def dt (first (re-seq #"\d{1,2}/.../\d{4}:\d{2}:\d{2}:\d{2}" sstr)))
+(def dt (re-find #"\d{1,2}/.../\d{4}:\d{2}:\d{2}:\d{2}" sstr))
 dt
+(format-dt )
 (def months ["Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"])
 (def day (.substring dt 0 2))
 (def mon (str )(+ (.indexOf months (.substring dt 3 6)) 1))
@@ -21,3 +23,4 @@ dt
 (.toString  mon)
 (def mon (if (< mon 10) (str "0" mon) mon))
 
+(re-find #"\d{1,2}/.../\d{4}:\d{2}:\d{2}:\d{2}" sstr)
