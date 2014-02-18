@@ -22,3 +22,10 @@
    (line-seq
     (clojure.java.io/reader filename))))
 
+(defn load-data[file]
+  (let [data (records-from-access-log file)
+         ]
+
+    )
+
+  (group-by :ip (records-from-access-log file)))
