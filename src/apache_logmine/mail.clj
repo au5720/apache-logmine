@@ -3,8 +3,8 @@
 
 (defn send-mail [report]
     (postal/send-message
-     {:from "santools@iseintlogrpt01"
-      :to "jennifer.morgan@ise.ie"
-      :subject "DAILY ISE SAN Report"
+     {:from "apache-logmine@iseintlogrpt01"
+      :to "admin@ise.ie"
+      :subject "DAILY Apache Log Report"
       :body [{:type "text/html"
               :content report}]}))
